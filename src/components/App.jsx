@@ -11,8 +11,13 @@ import './App.css';
 export function App() {
     const [artworks, setArtworks] = useState([]);
     const [selectedArtwork, setSelectedArtwork] = useState(null);
-    
+
     function onSearchSubmit(query) {
+      if (!query.trim()) {
+        setArtworks([]); 
+        return;
+      }
+    
       searchArtworks(query).then((json) => {
         setArtworks(json);
       });
@@ -36,4 +41,4 @@ export function App() {
         <Footer />
       </div>
     );
-  }
+}
