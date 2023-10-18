@@ -42,15 +42,22 @@ export function searchArtworks(query) {
 	 */
 	const requestUrl = `./ARTWORKS_SEARCH_RESULT.json`;
 
-	/**
-	 * We know the API serves JSON data, but
-	 * it's a good idea to explicitly request JSON anyway.
-	 * */
 	const headers = { Accept: 'application/json' };
 
-	return fetch(requestUrl, { headers }).then((res) => {
-		if (res.ok) {
-			return res.json();
-		}
-	});
+	return fetch(requestUrl, { headers })
+		.then((res) => {
+			if (res.ok) {
+				return res.json();
+			}
+			throw new Error("Failed to fetch artworks");
+		})
+		.then((data) => {
+			// Filter the artworks based on the query
+			return data.data.filter((artwork) => 
+				artwork.title.toLowerCase().includes(query.toLowerCase()) ||
+				(artwork.artist_title && artwork.artist_title.toLowerCase().includes(query.toLowerCase()))
+			);
+		});
+	
 }
+

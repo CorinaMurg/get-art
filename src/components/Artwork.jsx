@@ -1,4 +1,4 @@
-export default function Artwork({ artwork }) {
+export function Artwork({ artwork }) {
     return (
       <li>
         {artwork.artist_title ? artwork.artist_title : 'Unknown'}

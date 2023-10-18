@@ -27,8 +27,8 @@ export function App() {
 			<h1>TCL Career Lab Art Finder</h1>
 			<SearchForm onSearchSubmit={onSearchSubmit} />
 			<ul>
-          		{artworks.map((artwork, index) => (
-            		<Artwork key={index} artwork={artwork}/>
+          		{artworks.map((artwork) => (
+            		<Artwork artwork={artwork}/>
           		))}
         	</ul>
 
