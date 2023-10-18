@@ -1,0 +1,28 @@
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+.artwork {
+    font-size: 2rem;
+    margin-block: 3rem;
+}
+
+.artwork p {
+    margin-block: 0.5rem;
+}
+
+.artwork--button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    font-style: italic;
+    padding: 0;
+}
+
+.artwork--button:hover {
+    font-weight: bold;
+}

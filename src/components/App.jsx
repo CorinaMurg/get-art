@@ -17,7 +17,7 @@ export function App() {
         setArtworks(json);
       });
     }
-  
+	
     if (selectedArtwork) {
       return (
         <ImageDetailsPage artwork={selectedArtwork} onBack={() => setSelectedArtwork(null)} />

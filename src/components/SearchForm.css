@@ -18,9 +18,18 @@
 
 .Form .button {
 	margin-top: 0.25em;
+	background-color: var(--color-border);
+	color: white;
+	cursor: pointer;
+}
+
+.Form .button:hover {
+	background-color: gray;
 }
 
 .Form .input {
 	border: 1px solid var(--color-border);
 	border-radius: 0;
+	text-align: center;
+
 }
