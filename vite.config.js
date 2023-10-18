@@ -1,5 +1,5 @@
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
-import eslint from '@nabla/vite-plugin-eslint';
+// import eslint from '@nabla/vite-plugin-eslint';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
@@ -38,7 +38,7 @@ const PWAConfig = {
 export default defineConfig({
 	build: { outDir: './build', target: 'esnext' },
 	plugins: [
-		eslint({ formatter: 'stylish' }),
+		// eslint({ formatter: 'stylish' }),
 		react(),
 		splitVendorChunkPlugin(),
 		VitePWA(PWAConfig),
