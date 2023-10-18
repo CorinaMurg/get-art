@@ -1,5 +1,5 @@
 
-export default function ImageDetailsPage({ artwork }) {
+export function ImageDetailsPage({ artwork }) {
     const imageUrl = `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`;
 
     return (
