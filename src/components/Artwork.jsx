@@ -7,11 +7,11 @@ export function Artwork({ artwork, onSelectArtwork }) {
         <p>{artwork.artist_title ? artwork.artist_title : 'Unknown'}</p>
 
         <button 
-          className="artwork--button"
-          aria-label={`${artwork.title} by {artwork.artist_title}}`}
-          onClick={() => onSelectArtwork(artwork)}
-        >
-          {artwork.title}
+            aria-label={`${artwork.title} by {artwork.artist_title}}`}
+            className="artwork--button"
+            onClick={() => onSelectArtwork(artwork)}
+            >
+            {artwork.title}
         </button>
       
       

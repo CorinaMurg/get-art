@@ -5,7 +5,7 @@ export function ImageDetailsPage({ artwork, onBack }) {
 
     return (
       <div className='details'>
-        <button className='details-back--button' aria-label="Back to search results" onClick={onBack}>Back</button>
+        <button aria-label="Back to search results" className='details-back--button' onClick={onBack}>Back</button>
         <div className='details--image-container'>
             <img alt={artwork.thumbnail ? artwork.thumbnail.alt_text : artwork.title} src={imageUrl} />
         </div>

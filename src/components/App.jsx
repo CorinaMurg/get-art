@@ -13,32 +13,32 @@ export function App() {
     const [selectedArtwork, setSelectedArtwork] = useState(null);
 
     function onSearchSubmit(query) {
-      if (!query.trim()) {
-        setArtworks([]); 
-        return;
-      }
-    
-      searchArtworks(query).then((json) => {
-        setArtworks(json);
-      });
+        if (!query.trim()) {
+            setArtworks([]); 
+            return;
+        }
+        
+        searchArtworks(query).then((json) => {
+            setArtworks(json);
+        });
     }
 	
     if (selectedArtwork) {
-      return (
-        <ImageDetailsPage artwork={selectedArtwork} onBack={() => setSelectedArtwork(null)} />
-      );
+        return (
+            <ImageDetailsPage artwork={selectedArtwork} onBack={() => setSelectedArtwork(null)} />
+        );
     }
   
     return (
-      <div className="App">
-        <h1>TCL Career Lab Art Finder</h1>
-        <SearchForm onSearchSubmit={onSearchSubmit} />
-        <ul>
-          {artworks.map((artwork) => (
-            <Artwork artwork={artwork} onSelectArtwork={setSelectedArtwork} />
-          ))}
-        </ul>
-        <Footer />
-      </div>
+        <div className="App">
+            <h1>TCL Career Lab Art Finder</h1>
+            <SearchForm onSearchSubmit={onSearchSubmit} />
+            <ul>
+                {artworks.map((artwork) => (
+                    <Artwork artwork={artwork} onSelectArtwork={setSelectedArtwork} />
+                ))}
+            </ul>
+            <Footer />
+        </div>
     );
 }
